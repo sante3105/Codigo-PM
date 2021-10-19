@@ -1,0 +1,25 @@
+/*Practica de variables 
+  nombre:Santiago Escobar Celedon 
+  curso de programacion
+  objetivos: Declare un variable tipo float, sin inicializar, e imprima su valor
+             
+             Declare una variable tipo bool, la inicialize en false e imprima la  variables
+
+	     Declare una variable tipo double e imprima su direccion de memoria (use el operador & justo antes de la variable al imprimirla) y los bytes que ocupa                 (use el operador sizeof, basicamente debe escribir sizeof(double))
+	     
+	     Declare una variable tipo float con el valor inicial 1.0e40 e imprimala a la pantalla: ¿porque cree que imprime eso? Coloquelo como comentario en el                  codigo*/
+#include <iostream>
+int main()
+{float A, D{1.0e40};
+ bool  B{false};
+ double C=3.14;
+
+ std::cout<< "Variable tipo float sin inicializar:"<<A<<std::endl;
+ std::cout<< "Variable tipo bool inicializada en false"<<B<<std::endl;
+ std::cout<< "Variable tipo double"<<C<<std::endl<<std::cout<<"su direccion de memoria"<<&C<<std::endl<<std::cout<<"Bytes que ocupa"<<sizeof(double)<<std::endl;
+ std::cout<< "variable tipo float inicializada con el valor 1.0e40"<<D;
+ 
+  
+    }
+
+            

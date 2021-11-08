@@ -1,0 +1,24 @@
+/*Una fuerza variable de forma F⃗ =(2xsin(x),−24) N actúa sobre un cuerpo. El desplazamiento del mismo está dado por d⃗ =(4,0) m. Si la masa del cuerpo es m=1.25 Kg, calcule la rapidez final de la partícula asumiendo que esta es la única fuerza presente. Para esto aplique el teorema del trabajo - energía cinética usando integración por trapecio y por simpson con 10 y con 1000 intervalos. Compárelo porcentualmente con el valor exacto. Su programa debe imprimir la diferencia porcentual de cada método con cada uno de los intervalos así:
+
+N1 DeltaTrap1 DeltaSimp1
+N2 DeltaTrap2 DeltaSimp2
+
+Del anterior enunciado podemos deducir que el procedimiento a seguir es encontrar  la variacion de la enegia cinetica calculando la integral desde 0 hasta 4 de 2xsin(x) dx y a partir de ahi calcular la rapidez */
+#include <cmath>
+#include <iostream>
+//funciones
+double func(double x);
+template <typename fptr>
+double trapezoid(double a, double b, double h, fptr f);
+template <typename fptr>
+double simpson(double a, double b, double h, fptr f);
+//main
+int main()
+{std::cout.precision(15); std::cout.setf(std::ios::scientific);
+  double Xmin=0,Xmax=4, h=0,H=0,exact=0;
+  h=4/10;
+  H=4/1000;
+  exact=2*(std::sin(4)-4*std::cos(4));
+  std::cout<<exact;
+}
+  
